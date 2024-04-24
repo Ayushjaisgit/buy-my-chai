@@ -2,7 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.syncopate-regular {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.notable-regular {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.syncopate-bold {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.climate-crisis-regular {
+  font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YEAR" 1979;
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/fonts/variable/Nunito-VariableFont_wght.woff2") format("woff2");
+    font-named-instance: "Regular";
+  }
+
+  @font-face {
+    font-family: "Nunito";
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/fonts/variable/Nunito-Italic-VariableFont_wght.woff2")
+      format("woff2");
+    font-named-instance: "Italic";
+  }
+}
+
+/* Static Fonts */
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-named-instance: Regular;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Nunito-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-named-instance: Italic;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url("/fonts/Nunito-Italic.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-named-instance: SemiBold;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: semibold;
+    font-weight: 600;
+    src: url("/fonts/Nunito-SemiBold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-named-instance: SemiBoldItalic;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 600;
+    src: url("/fonts/Nunito-SemiBoldItalic.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-named-instance: Bold;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: bold;
+    font-weight: 700;
+    src: url("/fonts/Nunito-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-named-instance: BoldItalic;
+    font-display: swap;
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/Nunito-BoldItalic.woff2") format("woff2");
+  }
+}
+
 :root {
+  @apply antialiased font-sans;
+}
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +140,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

@@ -1,17 +1,23 @@
 import Image from "next/image";
+import coffee from "./assets/coffee-cup.png";
 
 export default function Home() {
   return (
     <div>
       <div className="flex justify-center flex-col gap-4 pt-10 mb-2 items-center h-[40vh] mt-10">
         <div
-          className="flex justify-center text-white text-6xl 
+          className="flex justify-center items-center text-white text-6xl 
         notable-regular  "
         >
           Buy me a Chai
+          <Image
+            src={coffee}
+            className="w-12 h-12 ml-4 justify-center items-center from-purple-900 to-purple-900"
+          ></Image>
         </div>
         <p className="text-white syncopate-regular text-center">
-          Accept support. Start a membership. Setup a shop. <br/> It’s easier than you think.
+          Accept support. Start a membership. Setup a shop. <br /> It’s easier
+          than you think.
         </p>
         <div>
           <button
